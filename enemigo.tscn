@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://5jsmiphssail"]
+
+[ext_resource type="Script" uid="uid://bv585a3ij7n8f" path="res://enemigo.gd" id="1_a5tj2"]
+[ext_resource type="Texture2D" uid="uid://blido5lhslguu" path="res://img/Obstaculo.png" id="2_moxti"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bnx68"]
+radius = 1302.11
+height = 4080.0
+
+[node name="EnemigoMain" type="CharacterBody2D"]
+script = ExtResource("1_a5tj2")
+
+[node name="EnemigoChild" type="Sprite2D" parent="."]
+position = Vector2(75, -93)
+scale = Vector2(0.0289913, 0.0305147)
+texture = ExtResource("2_moxti")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(72.7499, -101.75)
+scale = Vector2(0.0289913, 0.0305147)
+shape = SubResource("CapsuleShape2D_bnx68")

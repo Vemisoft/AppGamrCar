@@ -1,0 +1,55 @@
+
+1.	Ética en Ingeniería de Software, COSMIC.
+2.	Relación de herencia: superclases, subclases y constructores, programación en Java
+
+
+Código de Ética y Conducta Profesional de ACM
+1. PRINCIPIOS ÉTICOS GENERALES.
+2. RESPONSABILIDADES PROFESIONALES.
+3. PRINCIPIOS DE LIDERAZGO PROFESIONAL.
+4. CUMPLIMIENTO DEL CÓDIGO.
+
+🚨 ¿Colisiones?
+Para detectar colisión entre el jugador y los enemigos, podemos usar area_entered, body_entered, o detección manual con overlaps_body() más adelante.
+
+🕹️ ¿Qué sigue?
+🔄 3. Generar enemigos constantemente desde la parte superior
+Esto lo haremos desde la escena principal del juego (donde está tu jugador). Vamos a:
+
+Crear un temporizador que cada cierto tiempo cree un enemigo
+
+Hacer que aparezca en una posición X aleatoria arriba de la pantalla
+
+Y que baje automáticamente (como ya tienes programado)
+
+¿Te gustaría que agreguemos más adelante un espacio tipo Panel o Sprite2D en esos márgenes para simular los banners?
+
+🎮 - 🧪 - ❌ - 📝 - 🕹️ - 💰 - 📝
+🚀 - 🏁 - 🧠 - 🧩 - ➕ - 📱 - 🔒
+🛠️ - 🔧 - 🎯 - 🗑️ - 💡 - 🚨 - ✨
+✅ - 🔁 - 📌 - 🔍 - 💥 - ❤️ - 🎁
+🧱 - ⚠️  - 👾 - 👀 - 🧨 - ☠️
+
+🎨 Creatividad y diseño
+🎨 - 🖌️ - 🧵 - 🧶 - 🧷 - 🖼️ - 🧺 - 🎭
+
+💻 Desarrollo y tecnología
+🧮 - 🖥️ - 🧑‍💻 - 🧾 - 📂 - 🧰 - 🛡️ - 💾
+
+📚 Educación y organización
+📚 - 🗂️ - 📖 - 🧑‍🏫 - 📝 - 📅 - 📌 - 🧷
+
+🔄 Proceso y flujo
+🔄 - 🔂 - ⏩ - ⏳ - ⌛ - 🧭 - 📊 - 🗃️
+
+🚧 Advertencia y control
+🚫 - ⚠️ - 🚧 - ⛔ - 📛 - 🔒 - 🔐 - 🧯
+
+🌟 Éxito y progreso
+🏆 - 🥇 - 🎖️ - 🌈 - 🚦 - 🌟 - 🎊 - 🎉
+
+🧪 Ciencia y pruebas
+🧫 - 🧬 - 🔬 - 🧪 - 🧻 - 🧯 - 🧹 - 🧼
+
+🎮 Juegos y entretenimiento
+🕹️ - 👾 - 🧩 - 🎲 - 🃏 - 🎯 - 🎰 - 💡

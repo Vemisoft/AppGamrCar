@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://brrehff1uk75i"]
+
+[ext_resource type="Texture2D" uid="uid://cmt0htgnuc05q" path="res://img/Score.png" id="1_7urb4"]
+
+[sub_resource type="GDScript" id="GDScript_7urb4"]
+script/source = "extends Node2D
+@export var velocidad := 150
+
+func _ready():
+	z_index = 1
+	
+func _process(delta):
+	print(\"Moviendo score\")
+	position.y += velocidad * delta
+	if position.y > (get_viewport().size.y + 100):
+		queue_free()
+"
+
+[node name="ScoreMain" type="Node2D"]
+visibility_layer = 2
+script = SubResource("GDScript_7urb4")
+metadata/_edit_vertical_guides_ = [580.0]
+metadata/_edit_horizontal_guides_ = [32.0]
+
+[node name="ScoreRun" type="Sprite2D" parent="."]
+position = Vector2(568, 62)
+texture = ExtResource("1_7urb4")

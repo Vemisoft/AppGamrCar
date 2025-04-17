@@ -1,0 +1,107 @@
+[gd_scene load_steps=9 format=3 uid="uid://di0ev7x74bg0i"]
+
+[ext_resource type="Texture2D" uid="uid://dlfjctnw2o7qc" path="res://img/CarRed.png" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://dc82xuijotibe" path="res://main.gd" id="1_h2yge"]
+[ext_resource type="Script" uid="uid://1xomew6gl86" path="res://jugador.gd" id="2_h2yge"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
+size = Vector2(294.737, 855.653)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
+size = Vector2(1, 648)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lquwl"]
+size = Vector2(820, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7mycd"]
+size = Vector2(1152, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
+size = Vector2(30, 648)
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_h2yge")
+metadata/_edit_horizontal_guides_ = [329.0]
+metadata/_edit_vertical_guides_ = [579.0]
+
+[node name="Jugador" type="CharacterBody2D" parent="." groups=["Jugador"]]
+position = Vector2(577, 542)
+scale = Vector2(0.19, 0.14375)
+collision_mask = 2
+script = ExtResource("2_h2yge")
+velocidad = null
+
+[node name="Sprite2D" type="Sprite2D" parent="Jugador"]
+position = Vector2(-0.000244141, 0.000732422)
+scale = Vector2(0.993422, 1.18696)
+texture = ExtResource("1_0xm2m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jugador"]
+shape = SubResource("RectangleShape2D_0xm2m")
+
+[node name="TimerEnemigo" type="Timer" parent="."]
+autostart = true
+
+[node name="VidasLabel" type="Label" parent="."]
+process_mode = 2
+offset_left = 1006.0
+offset_top = 5.0
+offset_right = 1149.0
+offset_bottom = 28.0
+text = "Control Publicidad"
+
+[node name="ParedIzquierda" type="StaticBody2D" parent="."]
+position = Vector2(988, 325)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedIzquierda"]
+shape = SubResource("RectangleShape2D_1bvp3")
+
+[node name="ParedInferior" type="StaticBody2D" parent="."]
+position = Vector2(577, 648)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedInferior"]
+shape = SubResource("RectangleShape2D_lquwl")
+
+[node name="ParedSuperior" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedSuperior"]
+shape = SubResource("RectangleShape2D_7mycd")
+disabled = true
+
+[node name="PausaTimer" type="Timer" parent="."]
+process_mode = 2
+wait_time = 0.4
+autostart = true
+
+[node name="GameOverLabel" type="Label" parent="."]
+process_mode = 2
+offset_left = 426.0
+offset_top = 300.0
+offset_right = 732.0
+offset_bottom = 359.0
+theme_override_colors/font_color = Color(0.92, 0.9016, 0.9016, 1)
+theme_override_font_sizes/font_size = 30
+text = "☠️ GAME OVER ☠️"
+horizontal_alignment = 1
+vertical_alignment = 1
+text_overrun_behavior = 1
+
+[node name="ReinicioTimer" type="Timer" parent="."]
+process_mode = 2
+wait_time = 5.0
+one_shot = true
+
+[node name="ParedDerecha" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedDerecha"]
+position = Vector2(169, 324)
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="CuentaRegresivaLabel" type="Label" parent="."]
+process_mode = 2
+offset_left = 519.0
+offset_top = 356.0
+offset_right = 642.0
+offset_bottom = 393.0
+horizontal_alignment = 1
+vertical_alignment = 1
